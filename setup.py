@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='netapp-lib',
+    name='netapp_lib',
     description='NetApp clustered Data ONTAP Library',
     long_description='This library is slightly modified netapp-lib'
                      ' (part of netapp-flocker-driver'
@@ -13,7 +13,9 @@ setup(
     license='Apache 2.0',
     url='TBD',
     version='2018.10.30',
-
+    # packages=['suit', 'suit.templatetags'],
+    zip_safe=False,
+    include_package_data=True,
     packages=find_packages(),
     install_requires=[
         "lxml",
